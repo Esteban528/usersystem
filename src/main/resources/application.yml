@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: usersystem
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: este5ban9
+    url: jdbc:mysql://localhost:3306/usrsysdb?createDatabaseIfNotExist=true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  security:
+    jwt:
+      secret-key: pcjbj2vvcw9m6dslr3700rmxljqoftqzpcjbj2vvcw12312312 # DevMode, this field may be environment variable
+      expiration: 1516325422 # A day
+      refresh-token:
+        expiration: 1516843822 # A week
+
+logging:
+  level:
+    "[com.estebandev.usersystem.services]": DEBUG
+
+server:
+  port: 80
